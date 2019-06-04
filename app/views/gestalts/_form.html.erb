@@ -1,0 +1,37 @@
+<%= form_with(model: gestalt, local: true) do |form| %>
+  <% if gestalt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gestalt.errors.count, "error") %> prohibited this gestalt from being saved:</h2>
+
+      <ul>
+      <% gestalt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_of_perpetrator %>
+    <%= form.text_field :name_of_perpetrator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_of_offence %>
+    <%= form.datetime_select :time_of_offence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_of_offence %>
+    <%= form.text_field :type_of_offence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suggested_punishment %>
+    <%= form.text_field :suggested_punishment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

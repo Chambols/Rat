@@ -1,0 +1,2 @@
+class Gestalt < ApplicationRecord
+end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name of perpetrator:</strong>
+  <%= @gestalt.name_of_perpetrator %>
+</p>
+
+<p>
+  <strong>Time of offence:</strong>
+  <%= @gestalt.time_of_offence %>
+</p>
+
+<p>
+  <strong>Type of offence:</strong>
+  <%= @gestalt.type_of_offence %>
+</p>
+
+<p>
+  <strong>Suggested punishment:</strong>
+  <%= @gestalt.suggested_punishment %>
+</p>
+
+<%= link_to 'Edit', edit_gestalt_path(@gestalt) %> |
+<%= link_to 'Back', gestalts_path %>

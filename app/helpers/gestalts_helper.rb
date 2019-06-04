@@ -1,0 +1,2 @@
+module GestaltsHelper
+end
